@@ -44,11 +44,11 @@
     section {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        position: absolute;
+        // position: relative;
         width: 100%;
         padding: 0 4rem;
         gap: 3rem;
-        bottom: -25%;
+        translate: 0% -30%;
 
         figure {
             background-color: var(--white);
