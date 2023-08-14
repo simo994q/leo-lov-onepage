@@ -18,10 +18,24 @@
     z-index: 999;
     background-color: var(--white);
 
+    div {
+        display: none;
+        gap: 3px;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+            width: 24px;
+            height: 4px;
+            background-color: var(--blue);
+            border-radius: 4px;
+        }
+    }
+
     ul {
         display: flex;
         list-style: none;
-        margin-left: 1.5rem;
+        padding-left: 1.5rem;
 
         li {
             padding: 0 0.6rem;
@@ -52,7 +66,26 @@
 }
 
 @media (max-width: 650px) {
+    .navbarContainer div {
+        display: flex;
+        padding-left: 1.5rem;
+    }
+
     .navbarContainer ul {
-        flex-direction: column;
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 0fr;
+        position: absolute;
+        top: 100%;
+        background-color: var(--white);
+        width: 100%;
+        padding-bottom: 1rem;
+
+        li {
+            padding: 0;
+        }
+        li:not(:first-child) {
+            border-left: none;
+        }
     }
 }
