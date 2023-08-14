@@ -5,8 +5,9 @@ export function About(props) {
     if (props.reverse === false) {
         return (
             <div className={style.aboutContainer}>
-
-                <img src={props.image} />
+                <div>
+                    <img src={props.image} />
+                </div>
                 <figure>
                     <h2>{props.header}</h2>
                     <p>{props.textOne}</p>
@@ -16,7 +17,7 @@ export function About(props) {
             </div>
         )
     } else if (props.reverse === true) {
-                return (
+        return (
             <div className={style.aboutContainer}>
 
                 <figure>
@@ -24,8 +25,9 @@ export function About(props) {
                     <p>{props.textOne}</p>
                     <p>{props.textTwo}</p>
                 </figure>
-                <img src={props.image} />
-
+                <div>
+                    <img src={props.image} />
+                </div>
             </div>
         )
     }

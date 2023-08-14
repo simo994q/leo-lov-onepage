@@ -9,15 +9,16 @@
 }
 
 .footerContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     background-color: var(--navy);
     width: 100%;
-    padding: 3rem 14rem;
-    justify-content: space-between;
+    padding: 3rem 10%;
 
     section {
         display: flex;
         flex-direction: column;
+        margin-bottom: 1rem;
 
         h4 {
             font-size: 2.5rem;
@@ -45,5 +46,19 @@
             width: 50px;
             margin: 10px 10px 0 0;
         }
+    }
+}
+
+@media (max-width: 950px) {
+    .footerContainer {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media (max-width: 650px) {
+    .footerContainer {
+        grid-template-columns: 1fr;
+
     }
 }

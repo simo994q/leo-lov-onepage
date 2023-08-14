@@ -13,6 +13,10 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 10px solid var(--blue);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--white);
 
     ul {
         display: flex;
@@ -44,5 +48,11 @@
         span {
             color: var(--blue);
         }
+    }
+}
+
+@media (max-width: 650px) {
+    .navbarContainer ul {
+        flex-direction: column;
     }
 }
